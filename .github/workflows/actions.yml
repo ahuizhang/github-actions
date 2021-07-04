@@ -12,10 +12,10 @@ jobs: # 作业
       - name: Checkout # 步骤名
         uses: actions/checkout@master # 所使用的action
 
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.0
-        with:
-          node-version: "12.x"
+      #- name: Setup Node.js environment
+      # uses: actions/setup-node@v2.1.0
+      #with:
+      # node-version: "12.x"
 
       - name: Build Project
         run: yarn && yarn run ci
