@@ -13,7 +13,7 @@ jobs: # 作业
         uses: actions/checkout@v2 # 所使用的action
 
       - name: Setup Node
-      - uses: actions/setup-node@v2
+        uses: actions/setup-node@v2
         with:
           node-version: "14"
 
