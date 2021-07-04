@@ -18,7 +18,7 @@ jobs: # 作业
       # node-version: "12.x"
 
       - name: Build Project
-        run: yarn && yarn run ci
+        run: npm run build
 
       - name: Deploy to Server
         uses: hengkx/ssh-deploy@v1.0.1
