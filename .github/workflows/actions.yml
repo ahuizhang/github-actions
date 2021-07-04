@@ -23,5 +23,5 @@ jobs: # 作业
           PASSWORD: ${{ secrets.PASSWORD }}
           HOST: ${{ secrets.HOST }}
           SOURCE: "dist"
-          TARGET: "/www/wwwroot"
+          TARGET: "/www/wwwroot/lyyx16.com"
           # AFTER_COMMAND: "npm run stop && npm install --production && npm run start"
