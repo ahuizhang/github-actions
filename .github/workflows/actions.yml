@@ -10,10 +10,9 @@ jobs: # 作业
 
     steps: #步骤
       - name: Checkout # 步骤名
-        uses: actions/checkout@master # 所使用的action
+        uses: actions/checkout@v2 # 所使用的action
 
       - name: Setup Node
-      - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: "14"
