@@ -6,7 +6,7 @@
           <template #title><i class="el-icon-message"></i>导航一</template>
           <el-menu-item-group>
             <template #title>分组一</template>
-            <el-menu-item index="1-1">选项1</el-menu-item>
+            <el-menu-item index="1-1" @click="request">选项1</el-menu-item>
             <el-menu-item index="1-2">选项2</el-menu-item>
           </el-menu-item-group>
           <el-menu-item-group title="分组2">
@@ -80,6 +80,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
+import axios from "axios";
 export default defineComponent({
   name: "Home",
   // components: {
@@ -91,11 +92,18 @@ export default defineComponent({
       name: "王小虎",
       address: "上海市普陀区金沙江路 1518 弄",
     };
-
+    const request = () => {
+      // axios.defaults.baseURL = "http://localhost:7001";
+      axios.post("/auth/jwt/login", {
+        mobile: "13587714072",
+        password: "123456",
+      });
+    };
     const tableData = ref(Array(20).fill(item));
 
     return {
       tableData,
+      request,
     };
   },
 });
